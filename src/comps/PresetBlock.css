@@ -1,0 +1,54 @@
+.PresetBlock .bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.PresetBlock .topRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.PresetBlock .topRow .UserCardIcon {
+  width: 20px;
+  height: 16px;
+}
+
+.PresetBlock {
+  border: 2px solid var(--black);
+  background-color: white;
+  max-width: 345px;
+  padding: 24px;
+}
+
+.PresetBlock .innerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.PresetBlock .tags {
+  margin-top: 20px;
+}
+
+.PresetBlock .userLink {
+  margin-left: 8px;
+}
+
+.PresetBlock .PublishedTimeAgo {
+  display: flex;
+  flex-direction: column;
+}
+
+.PresetBlock .PublishedTimeAgo .re-timeAgoText:first-of-type {
+  margin-bottom: 4px;
+}
+
+.PresetBlock .PublishedTimeAgo {
+  margin-top: 1px;
+}

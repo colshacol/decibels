@@ -1,0 +1,109 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+@import url('https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|DM+Mono:500');
+
+:root {
+  --clearShadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  --clearSvgShadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  --altFont: 'Inter', system-ui, sans-serif;
+  --mainFont: 'Manrope', 'DM Sans', system-ui, sans-serif;
+  --white: #fff;
+  --black: #000;
+  --gray8: #292929;
+  --contrast1: #e2e6ef;
+  --contrast2: #cfd3dd;
+  --contrast3: #a8b1c4;
+  --contrast4: #8f9bb3;
+  --brandGreen: #14cc9e;
+  --highContrast: rgb(255, 255, 255);
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  text-shadow: var(--clearShadow);
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: #eef3f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.re-border-transparent {
+  border: 1px solid transparent;
+}
+
+.re-border-black-1 {
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+.re-border-black-2 {
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.re-bold {
+  font-weight: 800;
+}
+
+.re-main-font {
+  font-family: var(--mainFont);
+}
+
+*[disabled='true'] {
+  cursor: not-allowed;
+}
+
+.middle-section {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: auto;
+  justify-content: flex-start;
+  min-height: 117px;
+  width: 297px;
+}
+
+.Link {
+  font-family: var(--mainFont);
+  cursor: pointer;
+}
+
+.Link.GreenLink {
+  color: var(--brandGreen);
+}
+
+.Link.FatLink {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.Link.isActive,
+.Link[active='true'] {
+  text-decoration: underline;
+}
+
+.save {
+  color: white;
+  flex-shrink: 0;
+  font-size: 14px;
+  height: auto;
+  line-height: 10px;
+  margin: 0 auto;
+  min-height: 10px;
+  min-width: 50px;
+  text-align: left;
+  white-space: nowrap;
+  width: auto;
+}
+
+.userAttribute {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
