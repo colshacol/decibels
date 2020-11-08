@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { If, Then, Else } from 'react-if'
-import { styled, css } from '../../stitches'
+import { styled, css } from '../../styles'
 
 export const Tag = styled('span', {
+  cursor: 'pointer',
   height: '20px !important',
   display: 'inline-flex',
   flexDirection: 'row',

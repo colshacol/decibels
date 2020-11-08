@@ -6,5 +6,5 @@ export const Logo = styled('img', {
 })
 
 Logo.defaultProps = {
-  src: '/assets/rebass-logo-inverted.svg',
+  src: '/assets/rebass-logo.svg',
 }

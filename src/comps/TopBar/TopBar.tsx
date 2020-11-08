@@ -1,25 +1,34 @@
 import * as React from 'react'
-import { css, styled } from '../../stitches'
+import { css, styled } from '../../styles'
 import { darkTheme } from '../../styles/darkTheme'
 import { Block } from '../Block/Block'
+import { Section } from '../Block/Section'
+import { Link } from '../Link/Link'
 import { Logo } from '../Logo/Logo'
 
-const Container = styled(Block, {
-  background: '$contrast4',
+const containerCss = css({
+  background: '$contrast0',
+  width: '100%',
+  height: 48,
 })
 
 export const TopBar = (props) => {
   return (
-    <Container justify="between" css={darkTheme}>
+    <Section
+      justify="between"
+      align="center"
+      className={darkTheme}
+      css={containerCss}
+    >
       <Block>
         <Logo />
       </Block>
-      <Block justify="end" gap={6}>
-        <span>Home</span>
-        <span>Presets</span>
-        <span>Users</span>
-        <span>Account</span>
+      <Block justify="end" align="center" gap={6}>
+        <Link>Home</Link>
+        <Link>Presets</Link>
+        <Link>Users</Link>
+        <Link>Account</Link>
       </Block>
-    </Container>
+    </Section>
   )
 }

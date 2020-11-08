@@ -8,7 +8,7 @@ export const { styled, css } = createStyled({
 
   tokens: {
     colors: {
-      $brandGreen: '#14cc9e',
+      $brandGreen: '#0DCA9B',
       $gray0: '#e2e6ef',
       $gray3: '#8f9bb3',
       $gray8: '#292929',
@@ -20,15 +20,28 @@ export const { styled, css } = createStyled({
       $contrast2: '#cfd3dd',
       $contrast3: '#a8b1c4',
       $contrast4: '#8f9bb3',
-      $contrast5: '#',
-      $contrast6: '#',
+      $contrast5: '#ffffff',
+      $contrast6: '#ffffff',
       $contrast7: '#292929',
       $contrast8: '#000000',
     },
 
     fonts: {
-      $mainFont: '"Manrope", "DM Sans", system-ui, sans-serif',
+      $mainFont: '"DM Sans", system-ui, sans-serif',
       $altFont: '"Inter", system-ui, sans-serif',
+    },
+
+    space: {
+      $1: '4px',
+      $2: '8px',
+      $3: '12px',
+      $4: '16px',
+      $5: '20px',
+      $6: '24px',
+      $7: '28px',
+      $8: '32px',
+      $9: '36px',
+      $10: '40px',
     },
 
     shadows: {

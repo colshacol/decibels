@@ -1,23 +1,26 @@
 import * as React from 'react'
 import { If, Then, Else } from 'react-if'
-import { styled, css } from '../../stitches'
+import { styled, css } from '../../styles'
 
 export const Block = styled('div', {
   display: 'flex',
-  background: '$xcontrast0',
+  flexWrap: 'wrap',
 
   variants: {
     direction: {
-      reverse: { flexDirection: 'row-reverse' },
+      row: { flexDirection: 'row' },
+      rowReverse: { flexDirection: 'row-reverse' },
       column: { flexDirection: 'column' },
       columnReverse: { flexDirection: 'column-reverse' },
     },
+
     align: {
       center: { alignItems: 'center' },
       start: { alignItems: 'start' },
       end: { alignItems: 'end' },
       baseline: { alignItems: 'baseline' },
     },
+
     justify: {
       center: { alignItems: 'center' },
       start: { alignItems: 'flex-start' },
@@ -25,6 +28,12 @@ export const Block = styled('div', {
       between: { justifyContent: 'space-between' },
       around: { justifyContent: 'space-around' },
       evenly: { justifyContent: 'space-evenly' },
+    },
+
+    border: {
+      1: {
+        border: '1px solid $contrast8',
+      },
     },
 
     gap: {

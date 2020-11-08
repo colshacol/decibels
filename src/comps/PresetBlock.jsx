@@ -1,4 +1,3 @@
-import './PresetBlock.css'
 import React from 'react'
 import { TimeAgo } from './TimeAgo/TimeAgo'
 import { Button } from './Button/Button'
@@ -111,7 +110,7 @@ const userCardIconCss = css({
 })
 
 const userLinkCss = css({
-  marginLeft: 8,
+  marginLeft: 12,
 })
 
 const bottomRowCss = css({

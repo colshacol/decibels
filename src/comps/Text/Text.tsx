@@ -34,7 +34,7 @@ export const Text = styled('p', {
         cursor: 'pointer',
         fontWeight: 800,
         fontSize: 20,
-        letterSpacing: -0.5,
+        letterSpacing: -0.25,
       },
 
       blockTitle: {

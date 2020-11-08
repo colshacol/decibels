@@ -1,0 +1,11 @@
+.DS_Store
+build
+dist
+*.lock
+.vscode
+node_modules
+.env
+.env.local
+.env.development
+.env.production
+src/react-app-env.d.ts
