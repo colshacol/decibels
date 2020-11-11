@@ -4,12 +4,12 @@ import { styled, css } from '../../styles'
 export const Text = styled('p', {
   fontFamily: '$mainFont',
   fontSize: 14,
-  color: '$black',
+  color: '$contrast8',
 
   variants: {
     look: {
       tag: {
-        color: '$black',
+        color: '$contrast8',
         fontFamily: '$mainFont',
         letterSpacing: 2,
         fontWeight: 800,
@@ -19,7 +19,7 @@ export const Text = styled('p', {
       },
 
       support: {
-        color: '$gray3',
+        color: '$contrast5',
         fontFamily: '$mainFont',
         textTransform: 'uppercase',
         fontSize: 10,
@@ -30,7 +30,7 @@ export const Text = styled('p', {
 
       fatLink: {
         fontFamily: '$mainFont',
-        color: '$brandGreen',
+        color: '$green9',
         cursor: 'pointer',
         fontWeight: 800,
         fontSize: 20,
@@ -38,7 +38,7 @@ export const Text = styled('p', {
       },
 
       blockTitle: {
-        textShadow: '$clearShadow',
+        // textShadow: '$clearShadow',
         fontSize: 22,
         fontWeight: 650,
         lineHeight: '130%',

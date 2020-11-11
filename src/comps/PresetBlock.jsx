@@ -14,19 +14,15 @@ export function PresetBlock(props) {
       <Block css={innerContainerCss} direction="column">
         <Block css={topRowCss}>
           <Block css={userAttributeCss}>
-            <Icon css={userCardIconCss} src={props.userIdCard} />
+            <Icon className={userCardIconCss} iconName="userCard" />
             <Text look="fatLink" css={userLinkCss}>
               kensiebliss
             </Text>
           </Block>
-          <Icon
-            className="PlayIcon"
-            css={moreIconCss}
-            src={props.showMoreIcon}
-          />
+          <Icon iconName="menu" look="subtle" className={moreOptionsIconCss} />
         </Block>
-        <Block css={titleWrapperCss}>
-          <Icon className="PlayIcon" css={playIconCss} src={props.playIcon} />
+        <Block className={titleWrapperCss}>
+          <Icon iconName="play" className={playIconCss} />
           <Text look="blockTitle">{props.title}</Text>
         </Block>
         <TagList className="tags">
@@ -40,7 +36,7 @@ export function PresetBlock(props) {
         </TagList>
         <Block css={bottomRowCss}>
           <PublishedTimeAgo dateTime={props.dateTime || undefined} />
-          <Button look="bold" size="big">
+          <Button intent="main" size="big">
             save
           </Button>
         </Block>
@@ -49,38 +45,38 @@ export function PresetBlock(props) {
   )
 }
 
-const moreIconCss = css({
+const moreOptionsIconCss = css({
   position: 'relative',
   top: -2,
   right: 4,
-  height: 8,
-  width: 29,
+  height: 'auto',
+  width: 24,
 })
 
 const playIconCss = css({
   position: 'absolute',
-  left: 0,
-  top: 7,
-  height: 18,
-  width: 16,
+  left: 2,
+  top: 5,
+  height: 'auto',
+  width: 14,
 })
 
 const titleWrapperCss = css({
   flexbox: 'row',
   width: '100%',
   position: 'relative',
-  marginTop: 16,
+  marginTop: 12,
   marginLeft: -0.1,
   paddingRight: 24,
 
   [`& > ${Text}`]: {
-    textIndent: 28,
+    textIndent: 26,
   },
 })
 
 const containerCss = css({
-  border: '1px solid $black',
-  background: '$white',
+  border: '1px solid $contrast10',
+  background: '#fff',
   maxWidth: 345,
   padding: 24,
 })
@@ -106,7 +102,7 @@ const userAttributeCss = css({
 
 const userCardIconCss = css({
   width: 24,
-  height: 20,
+  height: 'auto',
 })
 
 const userLinkCss = css({

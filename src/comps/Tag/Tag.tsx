@@ -11,12 +11,12 @@ export const Tag = styled('span', {
   justifyContent: 'center',
   borderRadius: 2,
   padding: '0 6px',
-  border: '1px solid $black',
+  border: '1px solid $contrast8',
   whiteSpace: 'nowrap',
   userSelect: 'none',
 
   // Text styles.
-  color: '$black',
+  color: '$contrast8',
   fontFamily: '$mainFont',
   letterSpacing: 2,
   fontWeight: 800,
@@ -27,8 +27,8 @@ export const Tag = styled('span', {
   variants: {
     look: {
       bold: {
-        backgroundColor: '$black',
-        color: '$white',
+        background: '$contrast10',
+        color: '#fff',
       },
     },
   },

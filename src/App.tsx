@@ -3,15 +3,68 @@ import './styles.css'
 import { PresetBlock } from './comps/PresetBlock'
 import { TopBar } from './comps/TopBar/TopBar'
 import { Block } from './comps/Block/Block'
+import { Button } from './comps/Button/Button'
+import { Table } from './comps/Table/Table'
+import { Spacer } from './comps/Spacer/Spacer'
 import { Select } from './comps/Select/Select'
 import { Section } from './comps/Block/Section'
 import { css } from './styles'
+import './styles/global'
 
 export default function App(props) {
   return (
     <>
       <TopBar></TopBar>
-      <Section>
+
+      <Section style={{ paddingTop: '48px', paddingBottom: '48px' }}>
+        <Block direction="row" gap={6} width="3">
+          <Button intent="main">Main</Button>
+          <Button intent="danger">Danger</Button>
+          <Button intent="default">Default</Button>
+        </Block>
+        <Spacer size="md" />
+        <Block direction="row" gap={6} width="3">
+          <Button size="big" intent="main">
+            Main
+          </Button>
+          <Button size="big" intent="danger">
+            Danger
+          </Button>
+          <Button size="big" intent="default">
+            Default
+          </Button>
+        </Block>
+
+        <Spacer size="xxl" />
+
+        <Table initialSortColumn="id" initialSortDirection="ASC" />
+
+        <Spacer size="xxl" />
+
+        <Block direction="column" gap={6} width="3">
+          <Select width="0" options={selectOptions} />
+          <Select width="1" options={selectOptions} />
+          <Select width="2" options={selectOptions} />
+          <Select width="3" options={selectOptions} />
+        </Block>
+
+        <Spacer size="xxl" />
+
+        <Block direction="column" gap={6} width="3">
+          <Select
+            onChange={(...args) => console.log(args)}
+            size="big"
+            width="0"
+            options={selectOptions}
+          />
+          <Select size="big" width="1" options={selectOptions} />
+          <Select size="big" width="2" options={selectOptions} />
+          <Select size="big" width="3" options={selectOptions} />
+        </Block>
+        {/* </Section> */}
+
+        <Spacer size="xxl" />
+
         <Block css={rowCss}>
           <PresetBlock
             presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
@@ -71,16 +124,21 @@ export default function App(props) {
           />
         </Block>
       </Section>
-      <Section style={{ paddingTop: 48, paddingBottom: 48 }}>
-        <Select options={selectOptions} />
-      </Section>
     </>
   )
 }
 
 const selectOptions = [
-  { label: 'Serum', value: 'serum' },
+  { label: 'Absynth', value: 'absynth' },
+  { label: 'Colors', value: 'colors' },
+  { label: 'Kontakt', value: 'kontakt' },
   { label: 'Massive', value: 'massive' },
+  { label: 'Minimoog', value: 'minimoog' },
+  { label: 'Output Arcade', value: 'arcade' },
+  { label: 'Serum', value: 'serum' },
+  { label: 'Spire', value: 'spire' },
+  { label: 'Sylenth', value: 'sylenth' },
+  // { label: 'Massive', value: 'massive' },
 ]
 
 const rowCss = css({

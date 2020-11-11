@@ -30,6 +30,18 @@ export const Block = styled('div', {
       evenly: { justifyContent: 'space-evenly' },
     },
 
+    width: {
+      '1': {
+        width: '33%',
+      },
+      '2': {
+        width: '66%',
+      },
+      '3': {
+        width: '100%',
+      },
+    },
+
     border: {
       1: {
         border: '1px solid $contrast8',

@@ -6,6 +6,7 @@
   --white: #fff;
   --black: #000;
   --gray8: #292929;
+  --green4: #c7f1e6;
   --contrast1: #e2e6ef;
   --contrast2: #cfd3dd;
   --contrast3: #a8b1c4;
@@ -17,6 +18,9 @@
   backface-visibility: hidden;
   text-shadow: var(--clearShadow);
   text-rendering: optimizeLegibility;
+
+  scrollbar-color: rebeccapurple green;
+  scrollbar-width: thin;
 }
 
 body {

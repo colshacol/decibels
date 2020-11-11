@@ -5,7 +5,7 @@ export const Link = styled('a', {
   cursor: 'pointer',
   fontFamily: '$mainFont',
   textDecoration: 'none',
-  color: '$brandGreen',
+  color: '$green9',
   fontWeight: 200,
   fontSize: 16,
   letterSpacing: -0.25,
