@@ -1,12 +1,10 @@
+import faker from 'faker'
+import sort from 'fast-sort'
+import mems from 'mems'
 import * as React from 'react'
 import { Table as FluidTable } from 'react-fluid-table'
-import faker from 'faker'
-import { nanoid } from 'nanoid'
-import { styled } from '../../styles'
-import sort from 'fast-sort'
 import { useImmer } from 'use-immer'
-import mems from 'mems'
-import { FixedSizeList } from 'react-window'
+import { styled } from '../../styles'
 
 const tableRows = Array(192)
   .fill('')
@@ -121,7 +119,7 @@ const TableWrapper = styled(FluidTable, {
   },
 
   '&.react-fluid-table::-webkit-scrollbar': {
-    background: '$contrast2',
+    background: '#eef3f2',
     borderLeft: '1px solid $contrast10',
     width: 8,
   },

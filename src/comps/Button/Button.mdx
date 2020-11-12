@@ -3,6 +3,21 @@ name: Button
 route: /components/Button
 ---
 
-# Hello world
+import { Section } from '../Block/Section.tsx'
+import { Button } from './Button.tsx'
 
-Hello, I'm a mdx file!
+# Button
+
+<Section gap={5} style={{ paddingTop: '48px', paddingBottom: '48px' }}>
+<Button>Default</Button>
+<Button intent="main">Main</Button>
+<Button intent="danger">Danger</Button>
+</Section>
+
+## Size
+
+<Section gap={5} style={{ paddingTop: '48px', paddingBottom: '48px'}}>
+<Button size="big">Big Default</Button>
+<Button size="big" intent="main">Big Main</Button>
+<Button size="big" intent="danger">Big Danger</Button>
+</Section>

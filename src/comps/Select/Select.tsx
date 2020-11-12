@@ -183,6 +183,7 @@ export const Select = styled(ReactSelect, {
 
 Select.defaultProps = {
   // menuIsOpen: true,
+  width: 0,
   className: 'RebassSelect',
   options: [],
   maxMenuHeight: 180,
