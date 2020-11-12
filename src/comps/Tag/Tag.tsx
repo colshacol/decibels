@@ -24,11 +24,26 @@ export const Tag = styled('span', {
   textTransform: 'uppercase',
   fontSize: 10,
 
+  '&:hover': {
+    background: '$green1',
+  },
+
   variants: {
+    size: {
+      big: {
+        padding: '0 8px',
+        height: '24px !important',
+        fontSize: 14,
+      },
+    },
     look: {
       bold: {
         background: '$contrast10',
         color: '#fff',
+
+        '&:hover': {
+          background: '$contrast8',
+        },
       },
     },
   },

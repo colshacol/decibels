@@ -18,6 +18,11 @@ export const Text = styled('p', {
         fontSize: 10,
       },
 
+      shortText: {
+        fontWeight: 800,
+        color: '$contrast10',
+      },
+
       support: {
         color: '$contrast5',
         fontFamily: '$mainFont',
@@ -32,9 +37,13 @@ export const Text = styled('p', {
         fontFamily: '$mainFont',
         color: '$green9',
         cursor: 'pointer',
-        fontWeight: 800,
-        fontSize: 20,
-        letterSpacing: -0.25,
+        fontWeight: 500,
+        fontSize: 16,
+        letterSpacing: 0.25,
+
+        '&:hover': {
+          textDecoration: 'underline',
+        },
       },
 
       blockTitle: {

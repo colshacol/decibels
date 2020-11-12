@@ -24,7 +24,7 @@ const columns = [
   { key: 'email', header: 'Email', sortable: true, width: 250 },
 ]
 
-const useTableState = (props) => {
+const useTableState = props => {
   const [state, setState] = useImmer({
     sortDirection: props.initialSortDirection,
     sortedColumn: props.initialSortedColumn,
@@ -33,33 +33,33 @@ const useTableState = (props) => {
     rawRows: props.rows,
   })
 
-  const setSortDirection = (sortDirection) => {
-    setState((draft) => {
+  const setSortDirection = sortDirection => {
+    setState(draft => {
       draft.sortDirection = sortDirection
     })
   }
 
-  const setSortedColumn = (sortedColumn) => {
-    setState((draft) => {
+  const setSortedColumn = sortedColumn => {
+    setState(draft => {
       draft.sortedColumn = sortedColumn
     })
   }
 
-  const setSearchValue = (searchValue) => {
-    setState((draft) => {
+  const setSearchValue = searchValue => {
+    setState(draft => {
       draft.searchValue = searchValue
     })
   }
 
   const applySort = (sortedColumn, sortDirection) => {
-    setState((draft) => {
+    setState(draft => {
       draft.sortedColumn = sortedColumn || props.initialSortColumn
       draft.sortDirection = sortDirection || props.initialSortDirection
     })
   }
 
   React.useEffect(() => {
-    setState((draft) => {
+    setState(draft => {
       draft.rawRows = props.rows
       draft.tableRows = props.rows
     })
@@ -74,7 +74,7 @@ const useTableState = (props) => {
         searchValue,
       )
       return sort([...state.rawRows])[sortDirection.toLowerCase()](
-        (row) => row[sortedColumn],
+        row => row[sortedColumn],
       )
     })
   }, [state.rawRows])
@@ -100,6 +100,8 @@ export function Table(props) {
 
   return (
     <TableWrapper
+      id={props.id}
+      className={`DecibelsTable scrollContainer ${props.className}`}
       data={tableState.data}
       columns={tableState.columns}
       rowHeight={40}
@@ -113,12 +115,14 @@ export function Table(props) {
 
 const TableWrapper = styled(FluidTable, {
   '&.react-fluid-table': {
-    border: '2px solid $contrast10',
+    border: '1px solid $contrast10',
+    borderRight: 'none',
+    overscrollBehavior: 'contain',
   },
 
   '&.react-fluid-table::-webkit-scrollbar': {
     background: '$contrast2',
-    borderLeft: '2px solid $contrast10',
+    borderLeft: '1px solid $contrast10',
     width: 8,
   },
 
@@ -129,7 +133,7 @@ const TableWrapper = styled(FluidTable, {
 
   '&.react-fluid-table::-webkit-scrollbar-thumb': {
     background: '$contrast6',
-    borderLeft: '2px solid $contrast10',
+    borderLeft: '1px solid $contrast10',
     width: 8,
   },
 
@@ -183,6 +187,8 @@ const TableWrapper = styled(FluidTable, {
 })
 
 Table.defaultProps = {
+  className: '',
+  id: '',
   initialSortDirection: 'ASC',
   initialSortedColumn: 'id',
   initialSearchValue: '',

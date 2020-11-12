@@ -3,6 +3,8 @@ import './styles.css'
 import { PresetBlock } from './comps/PresetBlock'
 import { TopBar } from './comps/TopBar/TopBar'
 import { Block } from './comps/Block/Block'
+import { Tag } from './comps/Tag/Tag'
+import { TagList } from './comps/Tag/TagList'
 import { Button } from './comps/Button/Button'
 import { Table } from './comps/Table/Table'
 import { Spacer } from './comps/Spacer/Spacer'
@@ -37,7 +39,11 @@ export default function App(props) {
 
         <Spacer size="xxl" />
 
-        <Table initialSortColumn="id" initialSortDirection="ASC" />
+        <Table
+          id="demoTable"
+          initialSortColumn="id"
+          initialSortDirection="ASC"
+        />
 
         <Spacer size="xxl" />
 
@@ -65,63 +71,44 @@ export default function App(props) {
 
         <Spacer size="xxl" />
 
+        <Block width="3">
+          <TagList className="tags">
+            <Tag look="bold">serum v0.1.12</Tag>
+            <Tag>dubstep</Tag>
+            <Tag>bass</Tag>
+            <Tag>dirty</Tag>
+            <Tag>stab</Tag>
+            <Tag>wobble</Tag>
+            <Tag>reverb</Tag>
+          </TagList>
+        </Block>
+        <Spacer />
+        <Block width="3">
+          <TagList className="tags">
+            <Tag size="big" look="bold">
+              serum v0.1.12
+            </Tag>
+            <Tag size="big">dubstep</Tag>
+            <Tag size="big">bass</Tag>
+            <Tag size="big">dirty</Tag>
+            <Tag size="big">stab</Tag>
+            <Tag size="big">wobble</Tag>
+            <Tag size="big">reverb</Tag>
+          </TagList>
+        </Block>
+
         <Block css={rowCss}>
           <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
+            isPlaying
             title="this sounds like sonny moore aka skrillex"
           />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
-          <PresetBlock
-            presetblock="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/presetblock@2x.png"
-            userIdCard="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f996358484bc2d415af6146/img/user---id-card@2x.png"
-            showMoreIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/show-more-icon@2x.png"
-            playIcon="https://anima-uploads.s3.amazonaws.com/projects/5f9961fbeab32a435f11273a/releases/5f9963aaccbac992d5698570/img/play-icon@2x.png"
-            title="this sounds like sonny moore aka skrillex"
-          />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
+          <PresetBlock title="this sounds like sonny moore aka skrillex" />
         </Block>
       </Section>
     </>

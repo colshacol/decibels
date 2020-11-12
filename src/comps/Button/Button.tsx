@@ -9,12 +9,6 @@ export const Button = styled('button', {
   fontFamily: '$mainFont',
   outline: 'none',
   border: 'none',
-  letterSpacing: 2,
-  fontWeight: 800,
-  height: '28px !important',
-  padding: '0 32px',
-  fontSize: 14,
-
   variants: {
     isDisabled: {
       true: {
@@ -26,12 +20,12 @@ export const Button = styled('button', {
     intent: {
       default: {
         border: 'none',
-        background: '$contrast2',
-        color: '$contrast',
+        background: '#d6dbda',
+        color: '$contrast10',
         // outline: '1px solid unset',
 
         '&:active': {
-          background: '$contrast3',
+          background: '#bec2c2',
           // outline: '1px solid $contrast9',
           // outlineColor: '$contrast9',
           // boxShadow: '$shadow1',
@@ -81,9 +75,18 @@ export const Button = styled('button', {
     },
 
     size: {
+      default: {
+        height: '28px !important',
+        letterSpacing: 2,
+        fontWeight: 800,
+        padding: '0 24px',
+        fontSize: 14,
+      },
       big: {
         height: '40px !important',
+        letterSpacing: 2,
         padding: '0 32px',
+        fontWeight: 800,
         fontSize: 14,
       },
     },
@@ -105,6 +108,7 @@ export const Button = styled('button', {
 
 Button.defaultProps = {
   intent: 'default',
+  size: 'default',
 }
 
 // Button.compoundVariant(

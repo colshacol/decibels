@@ -9,3 +9,4 @@ node_modules
 .env.development
 .env.production
 src/react-app-env.d.ts
+.docz

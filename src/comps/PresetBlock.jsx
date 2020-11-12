@@ -9,8 +9,10 @@ import { TagList } from './Tag/TagList'
 import { css } from '../styles'
 
 export function PresetBlock(props) {
+  const containerStyle = props.isPlaying ? playingContainerCss : containerCss
+
   return (
-    <Block direction="column" css={containerCss}>
+    <Block direction="column" css={containerStyle}>
       <Block css={innerContainerCss} direction="column">
         <Block css={topRowCss}>
           <Block css={userAttributeCss}>
@@ -22,7 +24,14 @@ export function PresetBlock(props) {
           <Icon iconName="menu" look="subtle" className={moreOptionsIconCss} />
         </Block>
         <Block className={titleWrapperCss}>
-          <Icon iconName="play" className={playIconCss} />
+          {props.isPlaying && (
+            <Icon
+              iconName="pause"
+              className={playIconCss}
+              style={{ width: 24, top: 3, left: -4 }}
+            />
+          )}
+          {!props.isPlaying && <Icon iconName="play" className={playIconCss} />}
           <Text look="blockTitle">{props.title}</Text>
         </Block>
         <TagList className="tags">
@@ -35,7 +44,15 @@ export function PresetBlock(props) {
           <Tag>reverb</Tag>
         </TagList>
         <Block css={bottomRowCss}>
-          <PublishedTimeAgo dateTime={props.dateTime || undefined} />
+          {!props.isPlaying && (
+            <PublishedTimeAgo dateTime={props.dateTime || undefined} />
+          )}
+          {props.isPlaying && (
+            <Block gap={2} align="center">
+              <Text look="shortText">now playing</Text>
+              <Icon iconName="soundBars" className={soundBarsIconCss} />
+            </Block>
+          )}
           <Button intent="main" size="big">
             save
           </Button>
@@ -44,6 +61,11 @@ export function PresetBlock(props) {
     </Block>
   )
 }
+
+const soundBarsIconCss = css({
+  width: 24,
+  height: 24,
+})
 
 const moreOptionsIconCss = css({
   position: 'relative',
@@ -79,6 +101,14 @@ const containerCss = css({
   background: '#fff',
   maxWidth: 345,
   padding: 24,
+})
+
+const playingContainerCss = css({
+  border: '1px solid $contrast10',
+  background: '#fff',
+  maxWidth: 345,
+  padding: 24,
+  background: 'linear-gradient(#fff, #E8FDF8)',
 })
 
 const innerContainerCss = css({
